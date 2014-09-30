@@ -24,12 +24,13 @@ class EvaluatorIntro {
 
     public static void main(String[] args) throws Exception {
         RandomUtils.useTestSeed();
-        DataModel model = new FileDataModel(new File("D:\\intro.csv"));
+        DataModel model = new FileDataModel(new File(
+                "resources/recomender/intro.csv"));
 
         RecommenderEvaluator evaluator = new AverageAbsoluteDifferenceRecommenderEvaluator();
         // Build the same recommender for testing that we did last time:
         RecommenderBuilder recommenderBuilder = new RecommenderBuilder() {
-            
+
             public Recommender buildRecommender(DataModel model)
                     throws TasteException {
                 UserSimilarity similarity = new PearsonCorrelationSimilarity(

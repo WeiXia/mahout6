@@ -14,14 +14,14 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
-  <!-- 配置部署的远程仓库 -->  
-    <distributionManagement>  
-        <snapshotRepository>  
-            <id>nexus-snapshots</id>  
-            <name>nexus distribution snapshot repository</name>  
-            <url>http://10.10.69.23:8081/nexus-2.1.1/content/repositories/snapshots/</url>  
-        </snapshotRepository>  
-    </distributionManagement>
+  <!-- Maven内部仓库 -->
+  <distributionManagement>  
+      <snapshotRepository>  
+          <id>nexus-snapshots</id>  
+          <name>nexus distribution snapshot repository</name>  
+          <url>http://10.10.69.23:8081/nexus-2.1.1/content/repositories/snapshots/</url>  
+      </snapshotRepository>  
+  </distributionManagement>
     
   <dependencies>
     <dependency>
